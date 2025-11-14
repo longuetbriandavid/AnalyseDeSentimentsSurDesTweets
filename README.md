@@ -60,6 +60,6 @@ AnalyseDeSentimentsSurDesTweets.ipynb
 Mettre sur GPU T4
 1. Exécuter le notebook cellule par cellule?
 
-   
+ Vous pouvez également retrouver le modèle utilisé dans le dépôt ; il vous suffira de le charger. 
 
 

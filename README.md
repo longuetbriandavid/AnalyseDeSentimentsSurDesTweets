@@ -1,7 +1,7 @@
-## AnalyseDeSentimentsSurDesTweets
+# AnalyseDeSentimentsSurDesTweets - Projet IA
 Classification d'émotions avec DistilBERT & TweetEval 
 
-# Description :
+## Description :
 Ce projet consiste à entraîner un modèle de traitement automatique du langage (NLP) pour prédire les émotions dans des tweets.
 Il utilise le dataset TweetEval - Emotion, un benchmark standard pour les tâches NLP de classification de sentiments.
 
@@ -13,7 +13,7 @@ Les labels possibles du dataset sont :
 - 2 - optimism
 - 3 - sadness
 
-# Objectifs du projet :
+## Objectifs du projet :
 - Charger et préparer le dataset TweetEval
 - Tokenizer les tweets avec DistilBERT
 - Entraîner un modèle de classification avec Trainer
@@ -24,7 +24,7 @@ Comparer les résultats avec différentes méthodes :
 1. TensorFlow (déprécié dans Transformers)
 1. PyTorch (recommandé) 
 
-# Résultats obtenus : 
+## Résultats obtenus : 
 Avant entraînement :
 - Le modèle non entraîné affiche des performances très faibles :
   - Accuracy : 16 %
@@ -37,7 +37,7 @@ Après entraînement :
   -  F1-macro : ~76 %
 -  Cela prouve que le fine-tuning sur TweetEval améliore fortement la capacité du modèle à reconnaître les émotions.
 
-# Tests sur phrases personnalisées
+## Tests sur phrases personnalisées
 Le notebook inclut un module permettant de tester des exemples personnalisés, par exemple :
 - "I feel so sad..." -> sadness
 
@@ -51,7 +51,7 @@ Le projet note que les résultats diffèrent légèrement d'une méthode à l'au
 - de conversions internes entre frameworks
 - de versions différentes de Transformers
 
-# Comment exécuter le projet
+## Comment exécuter le projet
 1. Cloner le dépôt :
 git clone https://github.com/longuetbriandavid/AnalyseDeSentimentsSurDesTweets.git
 1. Ouvrir le fichier dans google colab:

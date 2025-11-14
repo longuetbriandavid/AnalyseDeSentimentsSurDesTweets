@@ -30,7 +30,6 @@ Comparer les résultats avec différentes méthodes :
   - Accuracy : 16 %
   -  F1-macro : 13 %
 - Ces valeurs montrent que le modèle pré-entraîné n'est pas adapté directement à la tâche.
-  
 1. Après entraînement :
 - Le modèle fine-tuné obtient des performances nettement meilleures :
   - Accuracy : ~80 %

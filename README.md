@@ -25,21 +25,40 @@ Comparer les résultats avec différentes méthodes :
 1. PyTorch (recommandé) 
 
 # Résultats obtenus : 
-1. Avant entraînement :
+Avant entraînement :
 - Le modèle non entraîné affiche des performances très faibles :
   - Accuracy : 16 %
   -  F1-macro : 13 %
 - Ces valeurs montrent que le modèle pré-entraîné n'est pas adapté directement à la tâche.
   
-2. Après entraînement :
+Après entraînement :
 - Le modèle fine-tuné obtient des performances nettement meilleures :
   - Accuracy : ~80 %
   -  F1-macro : ~76 %
 -  Cela prouve que le fine-tuning sur TweetEval améliore fortement la capacité du modèle à reconnaître les émotions.
 
+# Tests sur phrases personnalisées
+Le notebook inclut un module permettant de tester des exemples personnalisés, par exemple :
+- "I feel so sad..." -> sadness
 
+Plusieurs méthodes sont proposées :
+- Méthode classique Pipeline Transformers
+- TensorFlow (non recommandé, car déprécié dans Transformers v5)
+- PyTorch (recommandé)
 
-    
+Le projet note que les résultats diffèrent légèrement d'une méthode à l'autre à cause :
+- de différences d'implémentation
+- de conversions internes entre frameworks
+- de versions différentes de Transformers
+
+# Comment exécuter le projet
+1. Cloner le dépôt :
+git clone https://github.com/longuetbriandavid/AnalyseDeSentimentsSurDesTweets.git
+1. Ouvrir le fichier dans google colab:
+AnalyseDeSentimentsSurDesTweets.ipynb
+1. Modifier le type d'exécution :
+Mettre sur GPU T4
+1. Exécuter le notebook cellule par cellule?
 
    
 

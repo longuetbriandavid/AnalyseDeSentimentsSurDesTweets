@@ -51,10 +51,13 @@ Le projet note que les résultats diffèrent légèrement d'une méthode à l'au
 
 ## Matrice de confusion :
 Une matrice de confusion est utilisée afin d'analyser les erreurs de classification par classe.
+
 Elle permet de :
+
 - visualiser où le modèle confond certaines émotions,
 - identifier les classes les plus difficiles à prédire,
 - comprendre la qualité de généralisation du modèle.
+  
 Cette analyse met en évidence que certaines émotions proches sur le plan sémantique peuvent être confondues, notamment sadness et optimism dans des phrases ambiguës.
 
 ## Analyse de l'attention

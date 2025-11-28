@@ -62,10 +62,13 @@ Cette analyse met en évidence que certaines émotions proches sur le plan séma
 
 ## Analyse de l'attention
 Afin de rendre le modèle plus interprétable, une analyse des mécanismes d'attention de DistilBERT est réalisée.
+
 Elle permet de visualiser :
+
 - quels tokens influencent le plus la décision,
 - comment le modèle pondère chaque mot,
 - si les décisions sont cohérentes d'un point de vue linguistique.
+
 Les visualisations montrent que le modèle se concentre principalement sur des mots porteurs de sens émotionnel (ex : sad, happy, angry), ce qui confirme la pertinence des prédictions.
 
 ## Comment exécuter le projet

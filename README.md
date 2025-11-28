@@ -14,15 +14,13 @@ Les labels possibles du dataset sont :
 - 3 - sadness
 
 ## Objectifs du projet :
-- Charger et préparer le dataset TweetEval
-- Tokenizer les tweets avec DistilBERT
-- Entraîner un modèle de classification avec Trainer
-- Évaluer les performances (accuracy, F1-macro)
-- Tester le modèle avec des phrases personnalisées
-Comparer les résultats avec différentes méthodes :
-1. Méthode pipeline directe
-1. TensorFlow (déprécié dans Transformers)
-1. PyTorch (recommandé) 
+- Prétraiter le dataset TweetEval
+- Fine-tuner DistilBERT pour la classification d'émotions
+- Évaluer le modèle avec Accuracy et F1-score
+- Tester avec des phrases personnalisées
+- Comparer l'inférence via Pipeline, PyTorch et TensorFlow
+- Analyser les erreurs avec une matrice de confusion
+- Interpréter le modèle grâce à la visualisation de l'attention
 
 ## Résultats obtenus : 
 Avant entraînement :
@@ -50,6 +48,22 @@ Le projet note que les résultats diffèrent légèrement d'une méthode à l'au
 - de différences d'implémentation
 - de conversions internes entre frameworks
 - de versions différentes de Transformers
+
+## Matrice de confusion :
+Une matrice de confusion est utilisée afin d'analyser les erreurs de classification par classe.
+Elle permet de :
+- visualiser où le modèle confond certaines émotions,
+- identifier les classes les plus difficiles à prédire,
+- comprendre la qualité de généralisation du modèle.
+Cette analyse met en évidence que certaines émotions proches sur le plan sémantique peuvent être confondues, notamment sadness et optimism dans des phrases ambiguës.
+
+## Analyse de l'attention
+Afin de rendre le modèle plus interprétable, une analyse des mécanismes d'attention de DistilBERT est réalisée.
+Elle permet de visualiser :
+- quels tokens influencent le plus la décision,
+- comment le modèle pondère chaque mot,
+- si les décisions sont cohérentes d'un point de vue linguistique.
+Les visualisations montrent que le modèle se concentre principalement sur des mots porteurs de sens émotionnel (ex : sad, happy, angry), ce qui confirme la pertinence des prédictions.
 
 ## Comment exécuter le projet
 1. Cloner le dépôt :
